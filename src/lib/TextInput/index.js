@@ -1,8 +1,8 @@
-import React from "react";
-import "./TextInput.css";
+import React from 'react';
+import './style/index.css';
 
 const TextInput = ({
-  type = "text",
+  type = 'text',
   label,
   placeholder,
   value,
