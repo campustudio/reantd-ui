@@ -58,6 +58,7 @@ class Sider extends React.Component {
           )}
         >
           <Menu.Item key="/two-stage">two stage</Menu.Item>
+          <Menu.Item key="/async-selector">async selector</Menu.Item>
         </SubMenu>
       </Menu>
     );

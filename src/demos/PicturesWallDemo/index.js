@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { PicturesWall, MdPanel } from '@lib';
-import README from './README.md';
+import { PicturesWall } from '@lib';
 
 const jph = '//jsonplaceholder.typicode.com/posts/';
 
@@ -11,16 +10,7 @@ export default class PicturesWallDemo extends Component {
       files: [
         'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
       ],
-      md: '',
     };
-  }
-
-  componentWillMount() {
-    fetch(README)
-      .then(res => res.text())
-      .then((md) => {
-        this.setState({ md });
-      });
   }
 
   transformFiles2PureUrl = (files) => {
@@ -48,7 +38,7 @@ export default class PicturesWallDemo extends Component {
   }
 
   render() {
-    const { files, md } = this.state;
+    const { files } = this.state;
     console.log('Demo render files: ', files);
 
     return (
@@ -60,7 +50,6 @@ export default class PicturesWallDemo extends Component {
           isMultiple
           files={files}
         />
-        <MdPanel source={md} />
       </div>
     );
   }
