@@ -133,7 +133,7 @@ export default class AsyncCascader extends Component {
           onCascaderChange={this.onCascaderChange}
           asyncLoad={this.asyncLoad}
           type={type}
-          // matchOption={this.targetOption}
+          matchOption={this.targetOption}
           value={finalVal}
         />
       </div>

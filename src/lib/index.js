@@ -2,6 +2,7 @@ import TextInput from './TextInput';
 import Sider from './Sider';
 import PicturesWall from './PicturesWall';
 import AsyncCascader from './AsyncCascader';
+import AsyncExtensibleCascader from './AsyncExtensibleCascader';
 import AsyncSelector from './AsyncSelector';
 import AsyncInput from './AsyncInput';
 
@@ -12,4 +13,5 @@ export {
   AsyncCascader,
   AsyncSelector,
   AsyncInput,
+  AsyncExtensibleCascader,
 };
