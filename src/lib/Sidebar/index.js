@@ -1,12 +1,12 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { Menu, Icon } from 'antd';
+import { Menu } from 'antd';
 
 const { SubMenu } = Menu;
 
-class Sider extends React.Component {
+class Sidebar extends React.Component {
   // submenu keys of first level
-  rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
+  rootSubmenuKeys = ['sub1', 'sub2', 'sub3'];
 
   state = {
     openKeys: ['sub1'],
@@ -24,46 +24,36 @@ class Sider extends React.Component {
   };
 
   onClick = (e) => {
-    this.props.history.push(e.key);
+    const { history = {} } = this.props;
+    history.push(e.key);
   }
 
   render() {
+    const { openKeys } = this.state;
+
     return (
       <Menu
         mode="inline"
-        openKeys={this.state.openKeys}
+        openKeys={openKeys}
         onOpenChange={this.onOpenChange}
         onClick={this.onClick}
         style={{ width: 256 }}
       >
-        <SubMenu
-          key="sub1"
-          title={(
-            <span>
-              <Icon type="upload" />
-              <span>Upload</span>
-            </span>
-          )}
-        >
+        <SubMenu key="sub1" title={(<span>Upload</span>)}>
           <Menu.Item key="/upload-image">image</Menu.Item>
-          <Menu.Item key="/pictures-wall">pictures wall</Menu.Item>
+          <Menu.Item key="/pictures-wall">pictures wall v1.0.0</Menu.Item>
         </SubMenu>
-        <SubMenu
-          key="sub2"
-          title={(
-            <span>
-              <Icon type="block" />
-              <span>Cascader</span>
-            </span>
-          )}
-        >
+        <SubMenu key="sub2" title={(<span>Cascader</span>)}>
           <Menu.Item key="/one-stage">one stage</Menu.Item>
-          <Menu.Item key="/two-stage">two stage</Menu.Item>
+          <Menu.Item key="/two-stage">two stage v1.0.0</Menu.Item>
           <Menu.Item key="/async-selector">async selector</Menu.Item>
+        </SubMenu>
+        <SubMenu key="sub3" title={(<span>Input</span>)}>
+          <Menu.Item key="/dc-input">async double click v1.0.0</Menu.Item>
         </SubMenu>
       </Menu>
     );
   }
 }
 
-export default withRouter(Sider);
+export default withRouter(Sidebar);
