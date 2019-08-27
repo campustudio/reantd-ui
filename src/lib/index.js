@@ -6,6 +6,7 @@ import AsyncExtensibleCascader from './AsyncExtensibleCascader';
 import AsyncSelector from './AsyncSelector';
 import AsyncInput from './AsyncInput';
 import AsyncDCInput from './AsyncDCInput';
+import PartTypesConfirmSync from './PartTypesConfirmSync';
 
 export {
   TextInput,
@@ -16,4 +17,5 @@ export {
   AsyncInput,
   AsyncDCInput,
   AsyncExtensibleCascader,
+  PartTypesConfirmSync,
 };

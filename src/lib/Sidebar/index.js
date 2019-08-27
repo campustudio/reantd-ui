@@ -6,7 +6,7 @@ const { SubMenu } = Menu;
 
 class Sidebar extends React.Component {
   // submenu keys of first level
-  rootSubmenuKeys = ['sub1', 'sub2', 'sub3'];
+  rootSubmenuKeys = ['sub1', 'sub2', 'sub3', 'sub4'];
 
   state = {
     openKeys: ['sub1'],
@@ -50,6 +50,10 @@ class Sidebar extends React.Component {
         </SubMenu>
         <SubMenu key="sub3" title={(<span>Input</span>)}>
           <Menu.Item key="/dc-input">async double click v1.0.0</Menu.Item>
+        </SubMenu>
+        <SubMenu key="sub4" title={(<span>Toogle</span>)}>
+          <Menu.Item key="/pts-confirm-sync">PartTypesConfirmSync</Menu.Item>
+          <Menu.Item key="/pts-on-change-sync">PartTypesOnChangeSync</Menu.Item>
         </SubMenu>
       </Menu>
     );
