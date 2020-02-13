@@ -28,10 +28,15 @@ export default class PartInfo extends Component {
               const { id, checked, disabled } = type;
               console.log('checked: ', checked);
               return (
-                <div>
-                  <span>{id}</span>
-                  <input key={typeIdx} type="checkbox" id="bike" value="Bike" />
-                </div>
+                <button
+                  key={typeIdx}
+                  style={{ backgroundColor: checked && 'red' }}
+                  disabled={disabled}
+                  type="button"
+                  onClick={() => this.onTypeToogle(partIdx, typeIdx)}
+                >
+                  { id }
+                </button>
               );
             })
           }

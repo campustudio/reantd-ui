@@ -29,7 +29,11 @@ export default class PartTypesConfirmSyncDemo extends Component {
 
     if (Array.isArray(partList)) {
       partList[partIdx].partTypes[typeIdx].checked = !partList[partIdx].partTypes[typeIdx].checked;
-      this.onOffDisabled(partList[partIdx].partTypes[typeIdx].checked, partList[partIdx].partTypes);
+      this.onOffDisabled(
+        partList[partIdx].partTypes[typeIdx].checked,
+        partList[partIdx].partTypes,
+        partList[partIdx]
+      );
       this.setState(
         partList,
       );
@@ -56,21 +60,21 @@ export default class PartTypesConfirmSyncDemo extends Component {
     }
   }
 
-  onOffDisabled = (tChecked, pt) => {
+  onOffDisabled = (tChecked, partTypes, part) => {
     if (tChecked) {
-      this.checkedNum += 1;
+      part.checkedNum += 1;
     } else {
-      this.checkedNum -= 1;
+      part.checkedNum -= 1;
     }
 
-    if (this.checkedNum === 3) {
-      pt.forEach((p) => {
+    if (part.checkedNum === 3) {
+      partTypes.forEach((p) => {
         if (!p.checked) {
           p.disabled = true;
         }
       });
     } else {
-      pt.forEach((p) => {
+      partTypes.forEach((p) => {
         p.disabled = false;
       });
     }
