@@ -54,6 +54,20 @@ export const menuTree = [
       },
     ]
   },
+  {
+    title: '报表统计',
+    key: 'sub5',
+    items: [
+      {
+        title: '访问统计',
+        key: '/access-record',
+      },
+      {
+        title: '问题及建议',
+        key: '/qa-and-advice',
+      },
+    ]
+  },
 ]
 
 

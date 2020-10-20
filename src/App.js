@@ -9,6 +9,8 @@ import {
   AsyncExtensibleCascaderDemo,
   AsyncDCInputDemo,
   PartTypesConfirmSyncDemo,
+  AccessRecordDemo,
+  QaAndAdviceDemo,
 } from './demos';
 
 const App = () => (
@@ -24,6 +26,8 @@ const App = () => (
           <Route exact path="/async-selector" component={AsyncSelectorDemo} />
           <Route exact path="/dc-input" component={AsyncDCInputDemo} />
           <Route exact path="/pts-confirm-sync" component={PartTypesConfirmSyncDemo} />
+          <Route exact path="/access-record" component={AccessRecordDemo} />
+          <Route exact path="/qa-and-advice" component={QaAndAdviceDemo} />
         </Switch>
       </div>
     </div>

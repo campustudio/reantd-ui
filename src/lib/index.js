@@ -7,6 +7,8 @@ import AsyncSelector from './AsyncSelector';
 import AsyncInput from './AsyncInput';
 import AsyncDCInput from './AsyncDCInput';
 import PartTypesConfirmSync from './PartTypesConfirmSync';
+import AccessRecord from './AccessRecord';
+import QaAndAdvice from './QaAndAdvice';
 
 export {
   TextInput,
@@ -18,4 +20,6 @@ export {
   AsyncDCInput,
   AsyncExtensibleCascader,
   PartTypesConfirmSync,
+  AccessRecord,
+  QaAndAdvice,
 };
